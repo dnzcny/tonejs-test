@@ -30,7 +30,7 @@ editor.getSession().setMode('ace/mode/javascript');
 editor.setOptions({fontSize:'20pt'});
 
 var vol = new Tone.Volume(-12).toMaster();
-var polySynth = new Tone.PolySynth(3,Tone.FMSynth);
+var polySynth = new Tone.PolySynth(Tone.FMSynth);
 
 polySynth.connect(vol);
 
