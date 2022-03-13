@@ -1,48 +1,13 @@
 <!DOCTYPE html>
-<html>
-<head>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ace.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.38/Tone.js'></script>
-<style>
-html,body {width:100%; height:100%;}  
-#editor {width:100%; height:calc(100% - 40px);}  
-#go {width:100px; 
-height:30px ; 
-border:1px solid black;
-border-radius:20px;
-text-align:center;
-line-height:30px;
-margin:5px;
-}
-#go:hover{background:#ccc;cursor:pointer;}
-</style>
-</head>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.9/Tone.js" integrity="sha512-nUjml8mN4CNYqBAy0ndDrd8pJV/eTtBNDsnvNtPqozx9/BccUeWSoKW14qWkQUnhuh8E3m+yra3qdzM68lqPEQ==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
 
-<body>
-<div id='go' onclick='go()'>play</div>
-<div id='editor'></div>>
-
-
-<script>
-var editor = ace.edit('editor');
-editor.setTheme('ace/theme/monokai');
-editor.getSession().setMode('ace/mode/javascript');
-editor.setOptions({fontSize:'20pt'});
-
-var vol = new Tone.Volume(-12).toMaster();
-var polySynth = new Tone.PolySynth(Tone.FMSynth);
-
-polySynth.connect(vol);
-
-function go(){
-  
-  polySynth.triggerAttackRelease('C4','16n');
-
-}
-
-
-</script>
-</body>
-
+  </head>
+  <body>
+    <script src="sketch.js"></script>
+  </body>
 </html>
-
